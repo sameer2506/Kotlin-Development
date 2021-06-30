@@ -1,5 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Kotlin Development</string>
     <string name="enter_your_birth_year">Enter your birth year</string>
     <string name="your_age_show_here">Your age show here</string>
     <string name="get_my_age">Get My Age</string>
