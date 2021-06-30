@@ -3,7 +3,7 @@
 
 <p>My progress will be updated regularly with different branches respective. </p>
 
-<p>You may download my project and take a branch from it for better undarstanding.</p>
+<p>You may download my project and pull a branch from it for better undarstanding.</p>
 
 <ul><li><h2>Contributors</h2></li></ul>
 <table style="width:100%">
@@ -12,5 +12,6 @@
           </tr>
           <tr>
               <td><h2>Sameer Kumar</h2></td>
+             
           </tr>
 </table>
