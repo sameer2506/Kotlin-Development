@@ -1,6 +1,9 @@
 # Kotlin-Development
 <p>This is an internship project under the guidance of Softnika Solution.</p>
 
+<p>My progress will be updated regularly with different branches respective. </p>
+
+<p>You may download my project and take a branch from it for better undarstanding.</p>
 
 <ul><li><h2>Contributors</h2></li></ul>
 <table style="width:100%">
