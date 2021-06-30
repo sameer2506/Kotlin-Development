@@ -5,6 +5,10 @@
 
 <p>You may download my project and pull a branch from it for better undarstanding.</p>
 
+<p>Language used :- Kotlin</p>
+
+<p>Min SDK Version :- 29</p>
+
 <ul><li><h2>Contributors</h2></li></ul>
 <table style="width:100%">
 <tr>
