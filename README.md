@@ -7,11 +7,10 @@
 
 <ul><li><h2>Contributors</h2></li></ul>
 <table style="width:100%">
-          <tr>
-              <td><img src = "https://github.com/aarush368/KECTEST/blob/master/img/sameer.jpg" height= "200px" ></td>
-          </tr>
-          <tr>
-              <td><h2>Sameer Kumar</h2></td>
-             
-          </tr>
+<tr>
+<td><img src = "https://github.com/aarush368/KECTEST/blob/master/img/sameer.jpg" height= "200px" ></td>
+</tr>
+<tr>
+<td><h2>Sameer Kumar</h2></td>          
+</tr>
 </table>
