@@ -13,8 +13,8 @@ import kotlinx.android.synthetic.main.food_ticket.view.*
 
 class MainActivity : AppCompatActivity() {
 
-    var adapter:FoodAdapter?=null
-    var listOfFoods =ArrayList<Food>()
+    private var adapter:FoodAdapter?=null
+    private var listOfFoods =ArrayList<Food>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,17 +32,12 @@ class MainActivity : AppCompatActivity() {
         gvListFood.adapter =adapter
     }
 
-    class  FoodAdapter:BaseAdapter {
-        var listOfFood= ArrayList<Food>()
-        var context:Context?=null
-        constructor(context:Context,listOfFood:ArrayList<Food>):super(){
-            this.context=context
-            this.listOfFood=listOfFood
-        }
+    class  FoodAdapter(context: Context, private var listOfFood: ArrayList<Food>) : BaseAdapter() {
+        private var context:Context?= context
         override fun getView(p0: Int, p1: View?, p2: ViewGroup?): View {
             val food = this.listOfFood[p0]
-            var inflator = context!!.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-            var foodView= inflator.inflate(R.layout.food_ticket,null)
+            val inflator = context!!.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+            val foodView= inflator.inflate(R.layout.food_ticket,null)
             foodView.ivFoodImage.setImageResource(food.image!!)
             foodView.ivFoodImage.setOnClickListener {
 
