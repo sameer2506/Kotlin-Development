@@ -27,7 +27,6 @@ class MainActivity : AppCompatActivity() {
         LoadURLOnline()
         CheckUserPermsions()
 
-
         var mytracking=mySongTrack()
         mytracking.start()
 
@@ -142,7 +141,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun   LoadSong() {
+    fun LoadSong() {
         val allSongsURI = MediaStore.Audio.Media.EXTERNAL_CONTENT_URI
         val selection = MediaStore.Audio.Media.IS_MUSIC + "!=0"
         val cursor = contentResolver.query(allSongsURI, null, selection, null, null)
@@ -165,6 +164,5 @@ class MainActivity : AppCompatActivity() {
             lsListSongs.adapter=adapter
         }
     }
-
 
 }

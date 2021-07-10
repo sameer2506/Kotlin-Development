@@ -1,9 +1,5 @@
 package com.example.kotlindevelopment
 
-/**
- * Created by hussienalrubaye on 5/28/17.
- */
-
 class SongInfo{
 
     var Title:String?=null
