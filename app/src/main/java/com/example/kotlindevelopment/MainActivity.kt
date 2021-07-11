@@ -19,18 +19,13 @@ class MainActivity : AppCompatActivity() {
         val popTime= PopTime()
         val fm=supportFragmentManager
         popTime.show(fm,"Select time")
-
-
     }
 
     fun SetTime(Hours:Int,Minute:Int){
-
         tvShowTime.text= "$Hours:$Minute"
 
         val saveData=SaveData(applicationContext)
         saveData.SaveData(Hours,Minute)
         saveData.setAlarm()
-
-
     }
 }

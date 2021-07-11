@@ -7,20 +7,20 @@ import android.content.Intent
 import android.content.SharedPreferences
 import java.util.*
 
-class SaveData{
+class SaveData(context: Context) {
 
-    var context:Context?=null
+    var context:Context?= context
     var sharedRef:SharedPreferences?=null
-    constructor(context:Context){
-        this.context=context
-       sharedRef=context.getSharedPreferences("myref",Context.MODE_PRIVATE)
+
+    init {
+        sharedRef=context.getSharedPreferences("myref",Context.MODE_PRIVATE)
     }
 
     fun SaveData(hour:Int,minute:Int){
-       var editor=sharedRef!!.edit()
+       val editor=sharedRef!!.edit()
         editor.putInt("hour",hour)
         editor.putInt("minute",minute)
-        editor.commit()
+        editor.apply()
     }
 
     fun  getHour():Int{
@@ -40,16 +40,13 @@ class SaveData{
 
         val am= context!!.getSystemService(Context.ALARM_SERVICE) as AlarmManager
 
-        var intent=Intent(context, myBroadcastReceiver::class.java)
+        var intent=Intent(context, MyBroadcastReceiver::class.java)
         intent.putExtra("message"," alarm time")
         intent.action="com.tester.alarmmanager"
         val pi=PendingIntent.getBroadcast(context,0,intent,PendingIntent.FLAG_UPDATE_CURRENT)
 
-
         am.setRepeating(AlarmManager.RTC_WAKEUP,calender.timeInMillis,
                 AlarmManager.INTERVAL_DAY,pi)
-
-
 
     }
 }

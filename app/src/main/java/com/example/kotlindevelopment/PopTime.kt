@@ -12,14 +12,12 @@ import androidx.fragment.app.DialogFragment
 
 class PopTime: DialogFragment(){
 
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        var myView= inflater!!.inflate(R.layout.pop_time,container,false)
+        val myView= inflater.inflate(R.layout.pop_time,container,false)
 
-
-         var buDone=myView.findViewById(R.id.buDone) as Button
-        var tp1=myView.findViewById(R.id.tp1) as TimePicker
+        val buDone=myView.findViewById(R.id.buDone) as Button
+        val tp1=myView.findViewById(R.id.tp1) as TimePicker
 
         buDone.setOnClickListener {
             //Code here
