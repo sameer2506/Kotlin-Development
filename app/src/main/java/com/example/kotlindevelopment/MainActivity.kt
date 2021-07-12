@@ -46,8 +46,6 @@ class MainActivity : AppCompatActivity() {
         adpater= MyTweetAdpater(this,ListTweets)
         lvTweets.adapter=adpater
 
-
-
         SearchInDatabase("%",0)
     }
 
@@ -95,7 +93,7 @@ class MainActivity : AppCompatActivity() {
     fun SearchInDatabase(SearchText:String, startFrom:Int){
         val SearchText = URLEncoder.encode(SearchText,"utf-8")
         DownloadURL= URLEncoder.encode(DownloadURL,"utf-8")
-        val url="http://192.168.216.164/TwitterAndroidServer/TweetList.php?op=3&query=" + SearchText + "&StartFrom=" + startFrom
+        val url="http://192.168.222.164/TwitterAndroidServer/TweetList.php?op=3&query=" + SearchText + "&StartFrom=" + startFrom
         MyAsyncTask().execute(url)
     }
 
@@ -130,7 +128,7 @@ class MainActivity : AppCompatActivity() {
                     // CALL http
                     val postText = URLEncoder.encode(myView.etPost.text.toString(),"utf-8")
                     DownloadURL= URLEncoder.encode(DownloadURL,"utf-8")
-                    val url="http://192.168.216.164/TwitterAndroidServer/TweetAdd.php?user_id=" + SaveSettings.userID  +"&tweet_text=" + postText +"&tweet_picture="+ DownloadURL
+                    val url="http://192.168.222.164/TwitterAndroidServer/TweetAdd.php?user_id=" + SaveSettings.userID  +"&tweet_text=" + postText +"&tweet_picture="+ DownloadURL
                     MyAsyncTask().execute(url)
 
                     myView.etPost.setText("")
@@ -149,8 +147,8 @@ class MainActivity : AppCompatActivity() {
                 Picasso.get().load(mytweet.personImage).into(myView.picture_path)
                 myView.txtUserName.text = mytweet.personName
                 myView.txtUserName.setOnClickListener {
-                    //
-                    val url="http://192.168.216.164/TwitterAndroidServer/TweetList.php?op=2&user_id=" + mytweet.personID +"&StartFrom=0"
+
+                    val url="http://192.168.222.164/TwitterAndroidServer/TweetList.php?op=2&user_id=" + mytweet.personID +"&StartFrom=0"
                     MyAsyncTask().execute(url)
                 }
                 return myView
@@ -171,8 +169,6 @@ class MainActivity : AppCompatActivity() {
             return listNotesAdpater.size
 
         }
-
-
 
     }
 
@@ -230,8 +226,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-
-
     // CALL HTTP
     inner class MyAsyncTask: AsyncTask<String, String, String>() {
 
@@ -252,7 +246,6 @@ class MainActivity : AppCompatActivity() {
                 //Cannot access to ui
                 publishProgress(inString)
             }catch (ex:Exception){}
-
 
             return " "
 
@@ -299,10 +292,6 @@ class MainActivity : AppCompatActivity() {
             //after task done
         }
 
-
     }
-
-
-
 
 }

@@ -4,9 +4,6 @@ import java.io.BufferedReader
 import java.io.InputStream
 import java.io.InputStreamReader
 
-/**
- * Created by hussienalrubaye on 8/6/17.
- */
 class Operations{
 
     fun ConvertStreamToString(inputStream: InputStream):String{
@@ -24,8 +21,6 @@ class Operations{
             }while (line!=null)
             inputStream.close()
         }catch (ex:Exception){}
-
-
 
         return AllString
     }

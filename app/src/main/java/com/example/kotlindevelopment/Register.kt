@@ -90,8 +90,6 @@ class Register : AppCompatActivity() {
             }
             else-> super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         }
-
-
     }
 
     val PICK_IMAGE_CODE=123
@@ -143,8 +141,6 @@ class Register : AppCompatActivity() {
 
             var DownloadURL= taskSnapshot.storage.downloadUrl.toString()!!
 
-            // TODO: register to datavase
-
             Log.d("DownloadURL:",DownloadURL)
 
             val name =URLEncoder.encode(etName.text.toString(),"utf-8")
@@ -182,7 +178,6 @@ class Register : AppCompatActivity() {
                 publishProgress(inString)
             }catch (ex:Exception){}
 
-
             return " "
 
         }
@@ -206,12 +201,6 @@ class Register : AppCompatActivity() {
             //after task done
         }
 
-
     }
-
-
-// Progress Dialog
-
-
 
 }

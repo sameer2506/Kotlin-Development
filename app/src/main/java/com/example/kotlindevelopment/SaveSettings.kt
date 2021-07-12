@@ -4,9 +4,6 @@ import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 
-/**
- * Created by hussienalrubaye on 8/6/17.
- */
 class SaveSettings{
     var context:Context?=null
     var sharedRef:SharedPreferences?=null

@@ -1,8 +1,5 @@
 package com.example.kotlindevelopment
 
-/**
- * Created by hussienalrubaye on 8/6/17.
- */
 class  Ticket{
     var tweetID:String?=null
     var tweetText:String?=null
